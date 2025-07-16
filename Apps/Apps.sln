@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCPUI", "MCPUI\MCPUI.csproj", "{D20C100C-8F1C-44DF-865D-13DA6F3E1715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMCPWebAPIServer", "MyMCPWebAPIServer\MyMCPWebAPIServer.csproj", "{31879A78-A036-4357-A941-BD02E0222DB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D20C100C-8F1C-44DF-865D-13DA6F3E1715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20C100C-8F1C-44DF-865D-13DA6F3E1715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20C100C-8F1C-44DF-865D-13DA6F3E1715}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D20C100C-8F1C-44DF-865D-13DA6F3E1715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20C100C-8F1C-44DF-865D-13DA6F3E1715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31879A78-A036-4357-A941-BD02E0222DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31879A78-A036-4357-A941-BD02E0222DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31879A78-A036-4357-A941-BD02E0222DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31879A78-A036-4357-A941-BD02E0222DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10F7C19C-3D56-46CA-8798-23A9DA87FB87}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+﻿<div class="loading-indicator" style="display: @(IsVisible ? "block" : "none");">
+    <div class="spinner"></div>
+    <p>Analyzing...</p>
+</div>
+
+@code {
+    [Parameter] public bool IsVisible { get; set; }
+}

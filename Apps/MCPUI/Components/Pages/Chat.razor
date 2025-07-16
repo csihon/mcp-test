@@ -1,0 +1,50 @@
+﻿@page "/"
+
+<h3>Chat with LLM</h3>
+
+<div class="border rounded p-3 mb-3 bg-light">
+    @foreach (var message in chatHistory)
+    {
+        <div class="mb-3 p-2 rounded @(message.IsUser ? "text-black ms-5 user-msg" : " me-5 ai-msg")">
+            <strong>@(message.IsUser ? "You" : "LLM chat"):</strong>
+            <p class="mb-0 mt-2">@message.Content</p>
+        </div>
+        <MCPUI.Components.Widgets.LoadingIndicator IsVisible="IsLoading" />
+    }
+</div>
+<div class="border rounded p-3">
+    <div class="d-flex gap-2 mb-2">
+        <input type="text" class="form-control"
+               @bind="prompt"
+               @bind:event="oninput"
+               @onkeydown="HandleKeyDown"
+               placeholder="Hi! How can I help?" />
+
+        <div class="d-flex gap-2">
+            <button class="btn btn-primary" @onclick="AskLLMAsync">Ask</button>
+        </div>
+    </div>
+</div>
+@if (uploadedFiles.Any())
+{
+    <div class="border-top pt-2">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <small>Attached files:</small>
+            <button class="btn btn-link btn-sm text-danger p-0" @onclick="ClearFiles">
+                <small>Clear all</small>
+            </button>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            @foreach (var file in uploadedFiles)
+            {
+                <div class="bg-light rounded p-2 d-flex align-items-center" style="font-size: 0.875rem;">
+                    <i class="bi bi-file-pdf text-danger me-2"></i>
+                    <span class="text-truncate" style="max-width: 200px;">@file.Name</span>
+                    <button class="btn btn-link text-danger p-0 ms-2" style="font-size: 0.875rem;" @onclick="() => RemoveFile(file)">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,6 @@
+@MyMCPWebAPIServer_HostAddress = http://localhost:5268
+
+GET {{MyMCPWebAPIServer_HostAddress}}/weatherforecast
+Accept: application/json
+
+###
